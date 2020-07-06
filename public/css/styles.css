@@ -1,183 +1,116 @@
-/* General Styles */
-
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+html, body {
+	width: 100%;
+	height: 100%;
+	font-family: 'Roboto', sans-serif;
 }
 
-html {
-    font-size: 16px;
-}
-
-input {
-    font-size: 14px;
-}
-
-body {
-    line-height: 1.4;
-    color: #333333;
-    font-family: Helvetica, Arial, sans-serif;
-}
-
-h1 {
-    margin-bottom: 16px;
-}
-
-label {
-    display: block;
-    font-size: 14px;
-    margin-bottom: 8px;
-    color: #777;
-}
-
-input {
-    border: 1px solid #eeeeee;
-    padding: 12px;
-    outline: none;
-}
-
-button {
-    cursor: pointer;
-    padding: 12px;
-    background: #4488bb;
-    border: none;
-    color: white;
-    font-size: 16px;
-    transition: background .3s ease;
-}
-
-button:hover {
-    background: #1c5884;
-}
-
-button:disabled {
-    cursor: default;
-    background: #90c1e6;
-}
-
-/* Join Page Styles */
-
-.centered-form {
-    background: #333744;
-    width: 100vw;
-    height: 100vh;   
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.centered-form__box {
-    box-shadow: 0px 0px 17px 1px #1D1F26;
-    background: #F7F7FA;
-    padding: 24px;
-    width: 250px;
-}
-
-.centered-form button {
-    width: 100%;
-}
-
-.centered-form input {
-    margin-bottom: 16px;
-    width: 100%;
-}
-
-/* Chat Page Layout */
+/* sidebar */
 
 .chat {
-    display: flex;
+	display: flex;
+	height: 100%;
 }
-
 .chat__sidebar {
-    height: 100vh;
-    color: white;
-    background: #333744;
-    width: 225px;
-    overflow-y: scroll
+	height: 100vh;
+	color: #FFF;
+	min-width: 20%;
+	background-color: #1c5884;
+	padding: 1rem 2rem;
+}
+h1.site-title {
+	text-align: center;
+	font-family: 'Michroma', sans-serif;
+	padding: 0rem 2rem 1rem 2rem;
+	background-color: #1c5884;
+}
+.room-title {
+	text-align: center;
+	text-transform: uppercase;
+	padding: 1rem 0rem;
+}
+.users {
+	list-style: none;
+}
+.users li {
+	font-size: 0.80rem;
 }
 
-/* Chat styles */
-
+/* Message area */
 .chat__main {
     flex-grow: 1;
     display: flex;
     flex-direction: column;
     max-height: 100vh;
+    padding: 0rem 2rem;
 }
-
 .chat__messages {
-    flex-grow: 1;
-    padding: 24px 24px 0 24px;
-    overflow-y: scroll;
+	flex-grow: 1;
+	padding: 1rem 1rem;
+	overflow-y: scroll;
 }
-
-/* Message Styles */
-
 .message {
-    margin-bottom: 16px;   
+	border: 1px solid #dcdcdc;
+    padding: 0.4rem;
+    margin: 0.2rem 0rem;
 }
-
 .message__name {
-    font-weight: 600;
-    font-size: 14px;
-    margin-right: 8px;
+	font-weight: 700;
+	text-transform: capitalize;
 }
-
 .message__meta {
-    color: #777;
-    font-size: 14px;
+	font-size: 0.5em;
 }
-
-.message a {
-    color: #0070CC;
-}
-
-/* Message Composition Styles */
-
 .compose {
     display: flex;
     flex-shrink: 0;
     margin-top: 16px;
     padding: 24px;
 }
-
 .compose form {
     display: flex;
     flex-grow: 1;
     margin-right: 16px;
 }
-
 .compose input {
-    border: 1px solid #eeeeee;
+    border: 1px solid #eee;
     width: 100%;
-    padding: 12px;
-    margin: 0 16px 0 0;
+    padding: 0rem 1rem;
+    margin: 0 1rem 0 0;
     flex-grow: 1;
 }
 
-.compose button {
-    font-size: 14px;
+button {
+    cursor: pointer;
+    padding: 12px;
+    background: #48b;
+    border: none;
+    color: #fff;
+    transition: background .3s ease;
+}
+button:hover {
+    background: #1c5884;
 }
 
-/* Chat Sidebar Styles */
+/* mq */
 
-.room-title {
-    font-weight: 400;
-    font-size: 22px;
-    background: #2c2f3a;
-    padding: 24px;   
-}
-
-.list-title {
-    font-weight: 500;
-    font-size: 18px;
-    margin-bottom: 4px;
-    padding: 12px 24px 0 24px;
-}
-
-.users {
-    list-style-type: none;
-    font-weight: 300;
-    padding: 12px 24px 0 24px;
-}
+@media (max-width: 1024px) {
+	.chat {
+		flex-direction: column;
+	}
+	.chat__sidebar {
+		height: 100%;
+	}
+	.users {
+		display: inline-block;
+	}
+	.users li {
+	    font-size: 0.80rem;
+	    background-color: #033050;
+	    padding: 0.1rem;
+	}
+} 
