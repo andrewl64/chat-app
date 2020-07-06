@@ -41,6 +41,9 @@ input {
 .centered-form button {
     width: 100%;
 }
+.centered-form__box h1 {
+	margin-bottom: 1rem;
+}
 
 /* sidebar */
 
@@ -55,14 +58,13 @@ input {
 	background-color: #1c5884;
 	padding: 1rem 2rem;
 }
-.site-title {
-	text-align: center;
-	font-family: 'Michroma', sans-serif;
-	padding: 0rem 2rem 1rem 2rem;
-	background-color: #1c5884;
-}
 h1 {
 	font-family: 'Michroma', sans-serif;
+}
+.site-title {
+	text-align: center;
+	padding: 0rem 2rem 1rem 2rem;
+	background-color: #1c5884;
 }
 .room-title {
 	text-align: center;
