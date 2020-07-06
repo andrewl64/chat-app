@@ -9,6 +9,39 @@ html, body {
 	font-family: 'Roboto', sans-serif;
 }
 
+.centered-form {
+    background: #333744;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.centered-form__box {
+    box-shadow: 0 0 17px 1px #1d1f26;
+    background: #f7f7fa;
+    padding: 24px;
+    width: 250px;
+}
+label {
+    display: block;
+    font-size: 14px;
+    margin-bottom: 8px;
+    color: #777;
+}
+.centered-form input {
+    margin-bottom: 16px;
+    width: 100%;
+}
+input {
+    border: 1px solid #eee;
+    padding: 12px;
+    outline: 0;
+}
+.centered-form button {
+    width: 100%;
+}
+
 /* sidebar */
 
 .chat {
