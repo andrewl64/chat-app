@@ -105,8 +105,11 @@ button:hover {
 	.chat__sidebar {
 		height: 100%;
 	}
+	.list-title {
+		display: none;
+	}
 	.users {
-		display: inline-block;
+		display: none;
 	}
 	.users li {
 	    font-size: 0.80rem;
